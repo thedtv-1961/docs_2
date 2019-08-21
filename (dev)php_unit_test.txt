@@ -12,3 +12,9 @@ https://viblo.asia/p/php-unit-test-101-gioi-thieu-ve-phpunit-63vKjJEyK2R
   assertFalse(), 
   assertSame(),
   assertTrue()
+
+- Test private/protected method:
+  $this->invokeMethod($user, 'cryptPassword', ['passwordToCrypt']);
+    + $user: object User
+    + cryptPassword: ten private/protected method
+    + tham so: passwordToCrypt
