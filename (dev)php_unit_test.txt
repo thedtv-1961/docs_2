@@ -1,1 +1,14 @@
 https://viblo.asia/p/php-unit-test-101-gioi-thieu-ve-phpunit-63vKjJEyK2R
+----------
+- Install PHPUnitTest
+  sudo apt install php-xml php-json php-mbstring
+  composer require --dev phpunit/phpunit
+  
+  ./vendor/bin/phpunit
+
+- Các assertions hay dung;
+  assertArrayHasKey(), 
+  assertEquals(), 
+  assertFalse(), 
+  assertSame(),
+  assertTrue()
