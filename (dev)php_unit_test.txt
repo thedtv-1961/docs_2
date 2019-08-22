@@ -8,7 +8,9 @@ https://viblo.asia/p/php-unit-test-101-gioi-thieu-ve-phpunit-63vKjJEyK2R
   1/ convert hết tất cả các new CLass trong method đó thành param, VD: public function foo(User $user)
   2/ thực hiện tạo rfa các object fake để truyền vào method trên, VD: AuthorizeNetAIMFake, UserFake
   
- * PHPUnit Mock helper:  cho phép bạn tạo 1 class mới thoả mãn điều kiện trên ngay khi đang chạy test mà không phải tạo file mới cho mỗi class, method hữu ích cho việc này là `getMockBuilder`
+ * PHPUnit Mock helper: cho phép bạn tạo 1 class mới thoả mãn điều kiện trên ngay khi đang chạy test mà không phải tạo file mới cho mỗi class, method hữu ích cho việc này là `getMockBuilder`, nhưng tất cả method của mock object đều trả về null. Những method này được gọi là stubs!
+ 
+ * Stub method: Stub method là một method bắt chước hành vi của method ban đầu theo 2 tiêu chí: cùng tên và cùng parameters. Điểm khác biệt của stub method là tất cả code logic bên trong sẽ bị loại bỏ. nó return null. Nhưng những methjod trc' đây gọi ddến server bên ngoài thì bây giờ nó đã trả vè null tức là nó ko còn dùng các method gọi đến server bên ngoài nữa
 
 
 - Install PHPUnitTest
