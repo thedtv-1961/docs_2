@@ -1,5 +1,14 @@
 https://viblo.asia/p/php-unit-test-101-gioi-thieu-ve-phpunit-63vKjJEyK2R
 ----------
+
+
+* Mock: là thay thế một đối tượng thật = 1 đối tượng giả do mình tạo ra (fake hoặc mock object) loại bỏ những phụ thuộc từ bên ngoài như server api (trường hợp server die hay ko có server) thì mình có thể tạo ra các dữ liệu giả lập ở đây, hay goij đến một hệ thống bên ngoài mà chúng ta không càn phải test
+
+* Dependency Injecttion là: khi một method bên trong code lại gọi đến hàng trăm thaamjc hí hàng ngìn các methods con khác chưa kể những method con trong đó lại thuộc về các class khác nhau mà muốn gọi đến thì phải thực hiện new(khởi tạo CLass) vậy thì làm sao để khởi tạo đến các methods phụ thuộc đó, chưa kể nó còn lien quan đến hệ thống khác hệ không nằm trong 1 project:
+  1/ convert hết tất cả các new CLass trong method đó thành param, VD: public function foo(User $user)
+  2/ thực hiện tạo rfa các object fake để truyền vào method trên, VD: AuthorizeNetAIMFake, UserFake
+
+
 - Install PHPUnitTest
   sudo apt install php-xml php-json php-mbstring
   composer require --dev phpunit/phpunit
@@ -33,3 +42,4 @@ https://viblo.asia/p/php-unit-test-101-gioi-thieu-ve-phpunit-63vKjJEyK2R
 - Chỉ số CRAF:
   + nếu code có các câu lệnh như if else phức tạp hay lồng nhau hoặc foreach, swtich case thì chỉ sô CARF càng cao
   + nếu viết test case cover cho đầy đủ các trường hợp rẽ nhánh if else hay foreach thì cái chỉ số này nó sẽ giảm xuống
+
