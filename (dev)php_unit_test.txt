@@ -5,7 +5,17 @@ https://viblo.asia/p/php-unit-test-101-gioi-thieu-ve-phpunit-63vKjJEyK2R
   composer require --dev phpunit/phpunit
   
   ./vendor/bin/phpunit
-
+  
+- Install on System XDebug
+  sudo apt-get install php-xdebug
+  php -m
+  sudo service apache2 restart
+  maybe you need : `
+    vi /etc/php/7.0/mods-available/xdebug.ini
+    xdebug.show_error_trace = 1
+  `
+  sudo apt-get install php-soap php-curl
+  
 - Các assertions hay dung;
   assertArrayHasKey(), 
   assertEquals(), 
