@@ -18,3 +18,8 @@ https://viblo.asia/p/php-unit-test-101-gioi-thieu-ve-phpunit-63vKjJEyK2R
     + $user: object User
     + cryptPassword: ten private/protected method
     + tham so: passwordToCrypt
+- Coverage page:
+  ./vendor/bin/phpunit --coverage-html coverage
+- Chỉ số CRAF:
+  + nếu code có các câu lệnh như if else phức tạp hay lồng nhau hoặc foreach, swtich case thì chỉ sô CARF càng cao
+  + nếu viết test case cover cho đầy đủ các trường hợp rẽ nhánh if else hay foreach thì cái chỉ số này nó sẽ giảm xuống
