@@ -1,0 +1,28 @@
+* php artisan queue:work
+* php artisan queue:restart
+*
+
+
+- tao bang queue:
+  php artisan queue:table
+
+- .evn:
+  QUEUE_DRIVER=database
+
+- cmd:
+  php artisan migrate
+
+- .env:
+  MAIL_DRIVER=smtp
+  MAIL_HOST=smtp.mailtrap.io
+  MAIL_PORT=2525
+  MAIL_USERNAME=[username]
+  MAIL_PASSWORD=[password]
+  MAIL_ENCRYPTION=null
+- create job:
+  php artisan make:job <JobName>
+
+- reference to `SendGroupMember.php` file.
+
+- file controller:
+  $this->dispatch(new SendGroupMember(config('groups.email_type.add'), $member->email, trans('group.email.title.add'), $group, $member));
