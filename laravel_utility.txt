@@ -1,0 +1,4 @@
+1/ Cách để tạo dữ liệu:
+  - Use model: use Binou\Models\User;
+  - fill some fields: $user = factory(User::class)->create(['email'=>'user@gmail.com', 'password'=>bcrypt('123123')]);
+  
