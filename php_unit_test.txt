@@ -50,3 +50,7 @@
   + nếu code có các câu lệnh như if else phức tạp hay lồng nhau hoặc foreach, swtich case thì chỉ sô CARF càng cao
   + nếu viết test case cover cho đầy đủ các trường hợp rẽ nhánh if else hay foreach thì cái chỉ số này nó sẽ giảm xuống
 
+- Create DB for testing environment:
+   + rename .env.testing.example to .env.testing
+   + php artisan config:cache --env=testing : reload the config for testing environment
+   + php artisan migrate --env=testing : create tables
