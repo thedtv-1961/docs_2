@@ -53,6 +53,7 @@
   $ sudo service apache2 reload
 
 - Fix `./libraries/sql.lib.php#601`:
+  + go to: /usr/share/phpmyadmin/libraries/sql.lib.php
   || (count($analyzed_sql_results['select_expr'] == 1)
   to:
   || (count($analyzed_sql_results['select_expr']) == 1
