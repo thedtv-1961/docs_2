@@ -1,5 +1,5 @@
 - Copy all new / modifiles files to .zip file at Destop:
-	zip ~/Desktop/mychange.zip $({ (git ls-files --others --exclude-standard) ; (git ls-files --modified)})
+	zip ~/Desktop/mychange.pdf $({ (git ls-files --others --exclude-standard) ; (git ls-files --modified)})
 
 - merge commits to one:
 	git rebase -i HEAD~<N>
