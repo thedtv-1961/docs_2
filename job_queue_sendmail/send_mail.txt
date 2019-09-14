@@ -38,3 +38,14 @@ MAIL_ENCRYPTION=null
 	- php artisan queue:listen
 
 
+6/ Turn off IPV 6
+	- Linux:
+		+ sudo nano /etc/sysctl.conf
+		+ add below to end of file:
+			net.ipv6.conf.all.disable_ipv6 = 1
+			net.ipv6.conf.default.disable_ipv6 = 1
+			net.ipv6.conf.lo.disable_ipv6 = 1
+		+ sudo sysctl -p
+		+ cat /proc/sys/net/ipv6/conf/all/disable_ipv6
+
+		if result display is `1` is successfully, but it is `0`: echo "1" > /proc/sys/net/ipv6/conf/all/disable_ipv6 or reboot computer
