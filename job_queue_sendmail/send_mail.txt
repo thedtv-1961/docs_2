@@ -49,3 +49,15 @@ MAIL_ENCRYPTION=null
 		+ cat /proc/sys/net/ipv6/conf/all/disable_ipv6
 
 		if result display is `1` is successfully, but it is `0`: echo "1" > /proc/sys/net/ipv6/conf/all/disable_ipv6 or reboot computer
+7/ On docker:
+	- .docker/docker-composer.yml:
+		  mail:             <--------------------------
+		    image: schickling/mailcatcher             |
+		    ports:                                    |
+		      - 1080:1080                             |
+		      - 1025:1025                             |
+		    networks:                                 |
+		      - backend                               |
+                                                              |
+	- .env                                                |
+		MAIL_HOST=mail  ------------------------------
