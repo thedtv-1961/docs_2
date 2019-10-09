@@ -9,4 +9,5 @@
 	cat ~/.ssh/id_rsa.pub
 or with Windows:
 	clip < ~/.ssh/id_rsa.pub
-	
+	then
+	ssh-add ~/.ssh/id_rsa
