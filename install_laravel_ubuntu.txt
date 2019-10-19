@@ -58,7 +58,9 @@
   to:
   || (count($analyzed_sql_results['select_expr']) == 1
   
-
+- Fix user root can't login or Install MySQL Server missing input password step
+  password default if doesn't input: `password`
+  open terminal: sudo dpkg-reconfigure phpmyadmin
 
 Link chi tiết fix lỗi: 
   https://askubuntu.com/questions/55280/phpmyadmin-is-not-working-after-i-installed-it
