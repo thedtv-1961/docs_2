@@ -1,0 +1,4 @@
+- Lubuntu exitor menu:
+  install: sudo apt-get install alacarte
+  lauch app: alacarte
+  
