@@ -5,12 +5,14 @@
 
 1/ Config  MailCatcher:
 -.env: -> cmd `mailcatcher` to get host, port...
+    	MAIL_FROM_ADDRESS=from_email@mail.com
+	MAIL_FROM_NAME=DevelopmentTest
 	MAIL_DRIVER=smtp
 	MAIL_HOST=127.0.0.1
 	MAIL_PORT=1025
 	MAIL_USERNAME=null
 	MAIL_PASSWORD=null
-MAIL_ENCRYPTION=null
+        MAIL_ENCRYPTION=null
 
 2/ Config Queu Job:
 - env: 
@@ -24,13 +26,18 @@ MAIL_ENCRYPTION=null
 
 4/ Laravel code:
 	- tao Mailer:
-	 	 php artisan make:mail ABCMail
-
+	 	 php artisan make:mail ABCMailable
+		setting view + params... 
 	- create job:
 	 	 php artisan make:job <JobName>
+		 
+		 handle(){
+		 	Mail::to(<email to address>)->send(new ABCMailable([params...]));
+		 }
 
-	- reference to `SendGroupMember.php` file.
-	- use dispatch() function to execute job:  $this->dispatch(<JobClass>);
+	- usage:
+		use Illuminate\Support\Facades\Hash;
+		<JobName>::dispatch([params...]);
 
 5/ Send mail:
 	- php artisan queue:work #-> you must run this command while process send mail
