@@ -37,7 +37,11 @@
 
 	- usage:
 		use Illuminate\Support\Facades\Hash;
+		Add job vao` queue
 		<JobName>::dispatch([params...]);
+	- cac phuong thuc tien ich khac:
+		+ Delay: <NameJob>::dispatch()->delay(now()->addMinutes(10));
+		+ Xu ly tren Quee nao`, job nao`: NewJob::dispatch()->onQueue('processing')->onConnection('sqs');
 
 5/ Send mail:
 	- php artisan queue:work #-> you must run this command while process send mail
