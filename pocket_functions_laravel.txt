@@ -1,0 +1,4 @@
+- haspassword: Hash::make
+- check require if: require_if <> require_unless, require_withall, require_without...
+- a ?? b <=> isset(a) ? a : b;
+- a ?: b <=> a != null ? a : b;
