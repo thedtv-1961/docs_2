@@ -40,3 +40,16 @@
 		  develop
 	  	show_course
 	git push origin assign_trainee -f
+	
+- git stash: https://kipalog.com/posts/Su-dung-git-stash-hieu-qua
+	git stash save
+	
+	git stash list
+	`stash@{0}: WIP on <branch-name>: <lastest commit>
+	 stash@{1}: WIP on <branch-name>: <lastest commit>
+	 stash@{2}: WIP on <branch-name>: <lastest commit>`
+	
+	git stash pop stash@{1} -> get stash and drop stash
+	
+	git stash clear -> clear all stash
+	
