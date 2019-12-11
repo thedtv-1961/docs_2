@@ -1,17 +1,1 @@
-(1)-error: mysqld_safe Directory '/var/run/mysqld' for UNIX socket file don't exists
-`mkdir -p /var/run/mysqld
-chown mysql:mysql /var/run/mysqld`
-- `sudo mysql --user=root mysql`
-- `select * from user where user='root'`
-
-- `sudo /etc/init.d/mysql stop`
-- `sudo mysqld_safe --skip-grant-tables &` --> maybe error (1)
-- `mysql -uroot`
-- `use mysql;`
-- `update user set authentication_string=PASSWORD("mynewpassword") where User='root';`
-- `flush privileges;`
-- `quit`
-- `sudo /etc/init.d/mysql stop`
-...
-- `sudo /etc/init.d/mysql start`
-- `mysql -u root -p`
+https://stackoverflow.com/questions/2995054/access-denied-for-user-rootlocalhost-using-passwordno
