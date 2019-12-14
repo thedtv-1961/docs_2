@@ -61,6 +61,26 @@
 - Fix user root can't login or Install MySQL Server missing input password step
   password default if doesn't input: `password`
   open terminal: sudo dpkg-reconfigure phpmyadmin
+- Update password for `root` user:
+  + service mysql stop 
+  + mysqld_safe --skip-grant-tables &
+  + sudo mysql -u root -p
+  + > use mysql;
+  + > select * from  user;
+  + > truncate table user;
+  + > flush privileges;
+  + > grant all privileges on *.* to root@localhost identified by 'YourNewPassword' with grant option;
+  + > grant all privileges on *.* to root@localhost identified by '' with grant option;
+  + > flush privileges;
+  + > select host, user from user;
+  + > quit;
+  + > kill -KILL [PID of mysqld_safe]
+  + > kill -KILL [PID of mysqld]
+  + > service mysql start
+  + > mysql -u root -p 
+  
+  Link: https://stackoverflow.com/questions/2995054/access-denied-for-user-rootlocalhost-using-passwordno
+
 
 Link chi tiết fix lỗi: 
   https://askubuntu.com/questions/55280/phpmyadmin-is-not-working-after-i-installed-it
