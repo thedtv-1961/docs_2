@@ -1,5 +1,6 @@
 1/ RDP
   sudo apt-get install xrdp
+  sudo apt install lxsession
   lxsession -e LXDE -s Lubuntu
   sudo service xrdp restart
 
