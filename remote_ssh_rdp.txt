@@ -1,5 +1,7 @@
 1/ RDP
   sudo apt-get install xrdp
+  lxsession -e LXDE -s Lubuntu
+  sudo service xrdp restart
 
 2/ SSH (putty)
   sudo apt-get install openssh-server
