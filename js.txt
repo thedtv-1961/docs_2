@@ -1,0 +1,3 @@
+setTimeout(function (){
+    // do somethings...
+}, 500);
