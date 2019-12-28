@@ -29,7 +29,10 @@ array:
     + reduce: tinh toan => 1 gia tri duy nhat: VD tinh tong array, tinh tong tien shoping cart 
         arr.reduce(callback[, initialValue])
         https://developer.mozilla.org/vi/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
-        
+        let totalprice = carts.reduce(function(preVal, nextVal){
+          return preVal + nextVal.price * nextVal.quantity;
+        }, 0);
+
 
 
 
