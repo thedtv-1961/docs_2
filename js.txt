@@ -1,3 +1,44 @@
+++, --:
+    let a = 1
+    a++ // 1
+    ++a // 2
+    
+for..of:
+    for (let product of products){
+        ..//
+    }
+
+for..in:
+    for (let property in products){
+        property ==> index | property name
+    }
+
+array methods:
+    + concat: combine 2 arrays to an array
+    + push: add an item to last array
+    + pop: get + remove an item at last array 
+    + shift: get + remove an item at first array 
+
+callback:
+    Gọi lại là một function sẽ được thực thi sau khi một function khác đã được thực thi xong
+    
+array:
+    + map: bien doi cac items
+    + filter: get cac items thoa man dk(sk true/ false)
+    + find: get first item thoa man dk(sk true/ false)
+    + reduce: tinh toan => 1 gia tri duy nhat: VD tinh tong array, tinh tong tien shoping cart 
+        arr.reduce(callback[, initialValue])
+        https://developer.mozilla.org/vi/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+        
+
+
+
+
+
+
+
+
+
 setTimeout(function (){
     // do somethings...
 }, 500);
