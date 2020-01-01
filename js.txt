@@ -50,9 +50,22 @@ array:
     - JSON.stringify(<object>): Convert an object to JSON
     - JSON.parse(<JSON>): Convert JSON to object 
 
+- Promise:
+    .then() -> return Promise type
+    .catch()
+    .all([promises]): // day la cach truyen vao nhieu promise, .then(values) => [values]  
+    new Promise(function(resolve, reject) { 
+        // code .. resolve(data success), reject(exceptioin error)
+     } );
 
+- Async/ Await:
+    
 
+- setTimeout: hen. gio: --> return ID
 
+- setInterval: lap lai sau x khoang thoi gian: --> return ID
+
+- clearTimeOut(ID setTimeout / ID setInterval): cancel setTimeout / setInterval
 
 setTimeout(function (){
     // do somethings...
