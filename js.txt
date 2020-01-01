@@ -39,12 +39,12 @@ array:
     + Trong prototype thi` co' 1 thuoc tinh' constructor lien ket nguoc lai. voi' constructor
     VD: --------> `js/vd_1`
     
-    
 - Module:
     VD: --------> `js/vd_2`
     
-
-
+- Package:
+    `npm init`: enter neu la mac dinh, lay ten folder lam ten du an
+    `npm install abc-xyz --save` : --save luu vao file package json
 
 
 
