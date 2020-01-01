@@ -45,7 +45,10 @@ array:
 - Package:
     `npm init`: enter neu la mac dinh, lay ten folder lam ten du an
     `npm install abc-xyz --save` : --save luu vao file package json
-
+    
+- JSON:
+    - JSON.stringify(<object>): Convert an object to JSON
+    - JSON.parse(<JSON>): Convert JSON to object 
 
 
 
