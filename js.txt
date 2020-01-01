@@ -33,7 +33,11 @@ array:
           return preVal + nextVal.price * nextVal.quantity;
         }, 0);
 
-
+- prototype:
+    Prototype là cơ chế mà các object trong javascript kế thừa các tính năng từ một object khác: co the them thuoc tinh, them function,
+    + Trong constructor thi` co' 1 thuoc tinh'  la` prototype
+    + Trong prototype thi` co' 1 thuoc tinh' constructor lien ket nguoc lai. voi' constructor
+    
 
 
 
