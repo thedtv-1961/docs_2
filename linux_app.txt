@@ -14,3 +14,7 @@
 - Fix firmware Bug: TSX_DEADLINE disabled...
   sudo apt-get install intel-microcode
   reboot
+
+- remove app:
+  sudo apt-get --purge remove apache2
+  sudo apt-get autoremove
