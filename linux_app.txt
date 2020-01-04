@@ -2,3 +2,15 @@
   install: sudo apt-get install alacarte
   lauch app: alacarte
   
+- Fix PCI error on startup:
+  sudo nano /etc/default/grub
+  ```
+  ...
+  GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pci=nomsi"
+  ```
+  sudo update-grub
+  reboot
+
+- Fix firmware Bug: TSX_DEADLINE disabled...
+  sudo apt-get install intel-microcode
+  reboot
