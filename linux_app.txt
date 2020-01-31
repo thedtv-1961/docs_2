@@ -1,7 +1,7 @@
 - Lubuntu exitor menu:
   install: sudo apt-get install alacarte
   lauch app: alacarte
-  
+
 - Fix PCI error on startup:
   sudo nano /etc/default/grub
   ```
@@ -18,3 +18,6 @@
 - remove app:
   sudo apt-get --purge remove apache2
   sudo apt-get autoremove
+
+- get current folder directory path:
+  pwd
