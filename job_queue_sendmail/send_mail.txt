@@ -1,6 +1,7 @@
 * php artisan queue:work #-> you must run this command while process send mail
 * php artisan queue:restart
 *
+* $ > `mailcatcher --foreground --http-ip=0.0.0.0`
 * co the pass sang mail blade 1 object nhung nen su dung dd( ) trong blade mail de xem cau truc du lieu tranh truong hop bi loi 
 
 1/ Config  MailCatcher:
