@@ -21,3 +21,6 @@
 
 - get current folder directory path:
   pwd
+
+- Lubuntu screenshot app:
+  sudo apt-get install gnome-screenshot
