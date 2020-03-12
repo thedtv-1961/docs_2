@@ -17,3 +17,5 @@ php artisan passport:install
 php artisan passport:generate
 
 php artisan config:cache
+
+php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\ServiceProvider" --tag=assets

@@ -1,0 +1,88 @@
+I/ Basic command
+
+	docker <command> --help
+
+- images: xem docker co nhung images nao
+- search: tim kiem docker: 
+	docker search <tu khoa>
+- pull: download docker ve su dung: 
+	docker pull <ten image>:[<tag>] -> default tag get latest
+- image rm: delete image: 
+	docker image rm <name|id>:[<tag>] -> default tag get latest
+- rm: delete comtainer STOPED
+	+ docker rm <container name | container id>
+	+ delete comtainer running: docker rm -f <container name | container id>
+- run: chay image -> contaner (2)
+	+ docker run <param> <image name[:version]> <command> <param command>
+	+ `exit`: -> thoat| tat container (chay trong terimal) => trong terminal cua container (3)
+@- run: cung cap day du thamso:
+	docker run -it --name "custom ten container" -h <host name> <image name| image id>
+	docker run -it --name abc
+- stop: tuong thu (3) nhung su dung tu` host OS
+	docker stop <container id | container name>
+- start: (1) chay lai 1 contaner (ko chay trong termial)
+	docker start <container id>
+- attacch: (2) vao` terminal cua container sau khi (1)
+	docker attach <container id>
+- exec: run any command from host OS
+	docker exec <container name| container id> <command>
+	docker exec -it <container name| container id> bash
+- ps: list of container're running
+	`-a`: get all off/running containers
+- commit: save container installed apps/config... STOPED
+	docker commit <container name | container id> <name to save>:<tag>
+	-> `docker images` to see the container commited above
+- save: save image to file .tar
+	+ cd to any directory to save
+	+ docker save --output <file name>.tar <image name | image id>
+- load: load from .tar file
+	docker load -i <file name>.tar
+- tag: setting name, tag for image
+	docker tag <image id> <new name>:<new tag>
+
+II/ Chia se du lieu vs Host OS
+- with host OS: 
+	docker run -it -v <Host Path>:<container path> <image id | name>
+- with other container: 
+	+ docker run -it --volumes-from <container id|name from> <image id>
+	or
+	+ docker run -it --name <new name container> -- volumes-from <container id|name from> <image id>
+- create volume: (1)
+	docker volume create <disk name>
+- list of volumes:
+	docker volume ls
+- volume info:
+	docker volume inspect <disk name> 
+- delete volume
+	docker volume rm <disk name>
+- mount disk to container:(1)
+	docker run -it --name <container name> --mount source=<disk name>,target=<container directory> <image id|name>
+	docker run -it --name abc --mount source=disk1,target=/home/disk1 ubuntu:latest
+- create volume from exists folder: (2)
+	docker volume create --opt device=<host OS path directory> --opt type=none --opt o=bind <disk name>
+	docker volume create --opt device=/home/Workspace/abc --opt type=none --opt o=bind disk1
+- mount volume from exists folder to image:
+	docker run -it -v <disk name from exists folder>:<container path> <image name|id>
+	docker run -it -v disk1:/home/disk1 ubuntu:latest
+
+III/ Network
+- list of network
+	docker network ls
+- view detail network:
+	docker network inspect <network name>: get info network
+- create new network:
+    docker network create --driver <brige or host> <network name>
+- delete network:
+    docker network rm <network name>
+- setup network for container:
+    docker run -it --name <container id|name> --network  <network name> [-p <host OS port:container port>] [busybox]
+- setup network for container is running:
+    docker network connect <network name> <container name>
+- setup php fpm:
+    docker run -it --name my_c_php -h my_h_php --volume /Documents/Workspace/my_docker:/home/my_docker --network mynetwork php:7.3-fpm
+
+**/ Other note:
+- var/www/: directory web
+- httpd: start http
+- wget -0 - <ip:port | container name>: test connect http in terminal
+- Ctrl P + Q: (2) thoat terminal nhung keep container chay
