@@ -21,7 +21,7 @@
 4. Change versiondefault;
   $ update-alternatives --set php /usr/bin/phpxx.x
   `update-alternatives --set php /usr/bin/php7.3`
-  $ sudo apache2 restart
+  $ sudo service apache2 restart
 
   - For Debian:
     sudo apt install ca-certificates apt-transport-https
