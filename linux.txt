@@ -24,3 +24,6 @@
 
 - Lubuntu screenshot app:
   sudo apt-get install gnome-screenshot
+  
+  _ ubuntu lightweight desktop:
+  sudo apt-get install lubuntu-desktop
