@@ -24,3 +24,5 @@
 
 - Lubuntu screenshot app:
   sudo apt-get install gnome-screenshot
+  
+- Create USB bootable windows: woeusb
