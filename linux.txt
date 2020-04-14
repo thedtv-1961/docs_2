@@ -24,3 +24,6 @@
 
 - Lubuntu screenshot app:
   sudo apt-get install gnome-screenshot
+  
+- Unbuntu Dar theme:
+  Google keywork: Hacking_Parrot
