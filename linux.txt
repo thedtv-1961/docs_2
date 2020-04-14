@@ -16,7 +16,8 @@
   reboot
 
 - remove app:
-  sudo apt-get --purge remove apache2
+  sudo apt-get remove "<app name>"
+  sudo apt-get purge "<app name>"
   sudo apt-get autoremove
 
 - get current folder directory path:
